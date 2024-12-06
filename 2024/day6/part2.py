@@ -1,6 +1,6 @@
 from icecream import ic
 
-with open("test.txt", "r") as f:
+with open("input.txt", "r") as f:
     d = list(map(
         lambda x: list(x.strip()),
         f.readlines()
@@ -32,8 +32,8 @@ for ii, r in enumerate(d):
 
             if d[ni][nj] in ("#", "O"):
                 di, dj = dj, -di
-
-            i, j = i + di, j + dj
+            else:
+                i, j = i + di, j + dj
         else:
             total += 1
 
